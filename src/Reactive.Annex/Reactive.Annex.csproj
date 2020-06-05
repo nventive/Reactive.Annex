@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0</TargetFrameworks>
+		<RootNamespace>Reactive.Annex</RootNamespace>
+		<Authors>nventive</Authors>
+		<Company>nventive</Company>
+		<AssemblyName>Reactive.Annex</AssemblyName>
+		<PackageId>Reactive.Annex</PackageId>
+		<Description>Reactive.Annex</Description>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="System.Reactive" Version="4.4.1" />
+	</ItemGroup>
+	
+</Project>
