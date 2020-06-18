@@ -1,41 +1,43 @@
-# Open Source Project Template
+﻿# Reactive.Annex
 
-This repository contains a template to seed a repository for an Open Source
-project.
-
-## How to use this template
-
-1. Check out this repository
-2. Delete the `.git` folder
-3. Git init this repository and start working on your project!
-4. Prior to submitting your request for publication, make sure to review the
-   [Open Source guidelines for publications](https://nventive.visualstudio.com/Internal/_wiki/wikis/Internal_wiki?wikiVersion=GBwikiMaster&pagePath=%2FOpen%20Source%2FPublishing&pageId=7120).
-
-## Features (to keep as-is, configure or remove)
-- [Mergify](https://mergify.io/) is configured. You can edit or remove [.mergify.yml](/.mergify.yml).
-- [allcontributors](https://allcontributors.org/) is configured. It helps adding contributors to the README.
-- [dependabot](https://dependabot.com/) is configured. This bot will open pull requests automatically to update nuget dependencies. This one could be annoying, feel free to remove the [.dependabot](/.dependabot) folder.
-
-The following is the template for the final README.md file:
-
----
-
-# Project Title
-
-{Project tag line}
-
-{Small description of the purpose of the project}
+`Reactive.Annex` contains extension methods to help developers make the most out of the Reactive world.
+`Reactive.Annex.Uno` also contains an easy-to-use implementation of a dispatcher scheduler following the `IScheduler` interface.
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 ## Getting Started
 
-{Instructions to quickly get started using the project: pre-requisites, packages
-to install, sample code, etc.}
+Add the `Reactive.Annex` nuget package and its dependencies to your project.
+
+Then, make sure you are using the `System.Reactive.Linq` and `System.Reactive.Concurrency` namespaces in your file.
+
+You are now ready to use these handy extension methods!
+
+If your project uses the [Uno platform](https://platform.uno/), you can also add the `Reactive.Annex.Uno` package to your project. You can now create a `MainDispatcherScheduler`, which implements the `IDispatcherScheduler` interface.
+
+```
+var dispatcher = new MainDispatcherScheduler(CoreDispatcher.Main);
+```
 
 ## Features
 
-{More details/listing of features of the project}
+`Reactive.Annex` features:
+
+* `IBackgroundScheduler` and `IDispatcherScheduler`: Strongly-typed interfaces to clearly differentiate background schedulers from dispatcher schedulers. No need to rely on variable names anymore
+
+* `IObservable` extensions
+    - `FirstAsync`: Creates a task from an IObservable with the first value observed.
+    - `FromAsync`: Converts an async method into an observable sequence.
+	- `SelectManyDisposePrevious`: Runs an async action each time your observable sequence produces a new value while making sure to cancel the previous action if it's still running.
+    - `SkipWhileSelectMany`: Projects element of an observable sequence to another observable sequence, skipping new elements while resulting observable is not completed, and merges the resulting observable sequences into one observable sequence.
+
+* `IScheduler` extensions
+    - `ScheduleTask`: Schedules work using an asynchronous method, allowing for cooperative scheduling in an imperative coding style.
+    - `Run`: Awaits a task execution on the specified scheduler, providing the result.
+
+`Reactive.Annex.Uno` features:
+
+* `MainDispatcherScheduler`: an easy-to-use implementation of `IDispatcherScheduler`
 
 ## Changelog
 
