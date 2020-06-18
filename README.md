@@ -23,7 +23,7 @@ var dispatcher = new MainDispatcherScheduler(CoreDispatcher.Main);
 
 `Reactive.Annex` features:
 
-* `IBackgroundScheduler` and `IDispatcherScheduler`: you no longer need to rely on argument comments to indicate whether the `IScheduler` argument should be a dispatcher or a background scheduler!
+* `IBackgroundScheduler` and `IDispatcherScheduler`: Strongly-typed interfaces to clearly differentiate background schedulers from dispatcher schedulers. No need to rely on variable names anymore
 
 * `IObservable` extensions
     - `FirstAsync`: Creates a task from an IObservable with the first value observed.
