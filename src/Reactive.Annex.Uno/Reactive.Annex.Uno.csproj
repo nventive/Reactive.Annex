@@ -24,6 +24,7 @@
 	
 	<ItemGroup>
 		<PackageReference Include="System.Reactive" Version="4.4.1" />
+		<PackageReference Include="Uno.Core" Version="4.0.1" />
 	</ItemGroup>
 
   <ItemGroup>
