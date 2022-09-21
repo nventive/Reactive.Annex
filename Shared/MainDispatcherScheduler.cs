@@ -10,8 +10,10 @@ namespace System.Reactive.Concurrency
 		private readonly CoreDispatcher _dispatcher;
 		private readonly CoreDispatcherPriority _priority;
 
+
 		public MainDispatcherScheduler(CoreDispatcher dispatcher)
 		{
+
 			_dispatcher = dispatcher ?? throw new ArgumentNullException(nameof(dispatcher));
 			_priority = CoreDispatcherPriority.Normal;
 		}

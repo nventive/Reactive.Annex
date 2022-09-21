@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29613.14
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reactive.Annex", "src\Reactive.Annex\Reactive.Annex.csproj", "{1531CF77-44A9-4AB3-8BF7-848B23EBFA44}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reactive.Annex.Tests", "src\Reactive.Annex.Tests\Reactive.Annex.Tests.csproj", "{BA88A7E9-295E-444C-BB8A-96A3847F2A57}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reactive.Annex.Uno", "src\Reactive.Annex.Uno\Reactive.Annex.Uno.csproj", "{BA16A5BC-8590-465A-BA6B-9FB98DA5EA98}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reactive.Annex.Uno.WinUI", "src\Reactive.Annex.Uno.WinUI\Reactive.Annex.Uno.WinUI.csproj", "{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{919A81B5-BAB8-441B-88AF-8DC1D494B930}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,11 +81,36 @@ Global
 		{BA16A5BC-8590-465A-BA6B-9FB98DA5EA98}.Release|NuGet.Build.0 = Release|Any CPU
 		{BA16A5BC-8590-465A-BA6B-9FB98DA5EA98}.Release|UAP.ActiveCfg = Release|Any CPU
 		{BA16A5BC-8590-465A-BA6B-9FB98DA5EA98}.Release|UAP.Build.0 = Release|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Debug|Android.ActiveCfg = Debug|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Debug|Android.Build.0 = Debug|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Debug|iOS.ActiveCfg = Debug|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Debug|iOS.Build.0 = Debug|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Debug|NuGet.ActiveCfg = Debug|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Debug|NuGet.Build.0 = Debug|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Debug|UAP.ActiveCfg = Debug|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Debug|UAP.Build.0 = Debug|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Release|Android.ActiveCfg = Release|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Release|Android.Build.0 = Release|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Release|iOS.ActiveCfg = Release|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Release|iOS.Build.0 = Release|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Release|NuGet.ActiveCfg = Release|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Release|NuGet.Build.0 = Release|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Release|UAP.ActiveCfg = Release|Any CPU
+		{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}.Release|UAP.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5BA7DD68-E008-4F53-8F51-83D42D3877B9}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\Shared.projitems*{919a81b5-bab8-441b-88af-8dc1d494b930}*SharedItemsImports = 13
+		Shared\Shared.projitems*{ad0a3564-fed2-4b2a-adc8-293f4db85135}*SharedItemsImports = 5
+		Shared\Shared.projitems*{ba16a5bc-8590-465a-ba6b-9fb98da5ea98}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

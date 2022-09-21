@@ -20,7 +20,7 @@ namespace System.Reactive.Concurrency
 				{
 					try
 					{
-						disposable.Disposable = action(this, state);
+						disposable.Disposable = action((IScheduler)this, state);
 					}
 					catch (Exception)
 					{
