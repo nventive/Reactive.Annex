@@ -10,6 +10,7 @@
 	<PackageId>Reactive.Annex.Uno.WinUI</PackageId>
 	<Description>Reactive.Annex.Uno.WinUI</Description>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<PackageTags>mvvm;ios;android;chinook;maui;winui;</PackageTags>
 	<DefineConstants>$(DefineConstants);WINUI</DefineConstants>
   </PropertyGroup>
 	

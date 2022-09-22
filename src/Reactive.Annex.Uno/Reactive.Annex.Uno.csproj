@@ -1,4 +1,4 @@
-﻿<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+﻿<Project Sdk="MSBuild.Sdk.Extras/3.0.44">
   <PropertyGroup>
 	<!-- Change the TargetFrameworks depending on which platform you are building on. This avoids errors as it is impossible to build UAP on OSX (MacOS) -->
 	<TargetFrameworks Condition="'$([MSBuild]::IsOsPlatform(OSX))'">netstandard2.0;xamarinios10;</TargetFrameworks>
@@ -6,12 +6,13 @@
     <!-- Ensures the .xr.xml files are generated in a proper layout folder -->
     <GenerateLibraryLayout>true</GenerateLibraryLayout>
     <RootNamespace>Reactive.Annex</RootNamespace>
-		<Authors>nventive</Authors>
-		<Company>nventive</Company>
-		<AssemblyName>Reactive.Annex.Uno</AssemblyName>
-		<PackageId>Reactive.Annex.Uno</PackageId>
-		<Description>Reactive.Annex.Uno</Description>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<Authors>nventive</Authors>
+	<Company>nventive</Company>
+	<AssemblyName>Reactive.Annex.Uno</AssemblyName>
+	<PackageId>Reactive.Annex.Uno</PackageId>
+	<Description>Reactive.Annex.Uno</Description>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<PackageTags>mvvm;xamarin;ios;android;uwp;chinook;maui;winui;</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
