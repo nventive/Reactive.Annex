@@ -4,23 +4,37 @@
     <!-- Ensures the .xr.xml files are generated in a proper layout folder -->
     <GenerateLibraryLayout>true</GenerateLibraryLayout>
     <RootNamespace>Reactive.Annex</RootNamespace>
-	<Authors>nventive</Authors>
-	<Company>nventive</Company>
-	<AssemblyName>Reactive.Annex.Uno.WinUI</AssemblyName>
-	<PackageId>Reactive.Annex.Uno.WinUI</PackageId>
-	<Description>Reactive.Annex.Uno.WinUI</Description>
-	<GenerateDocumentationFile>true</GenerateDocumentationFile>
-	<PackageTags>mvvm;ios;android;chinook;maui;winui;</PackageTags>
-	<DefineConstants>$(DefineConstants);WINUI</DefineConstants>
+    <Authors>nventive</Authors>
+    <Company>nventive</Company>
+    <AssemblyName>Reactive.Annex.Uno.WinUI</AssemblyName>
+    <PackageId>Reactive.Annex.Uno.WinUI</PackageId>
+    <Description>Reactive.Annex.Uno.WinUI</Description>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>reactive;annex;mvvm;maui;winui;ios;android</PackageTags>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/nventive/Reactive.Annex</PackageProjectUrl>
+    <DefineConstants>$(DefineConstants);WINUI</DefineConstants>
+
+    <!--Needed for Source Link support -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 	
   <ItemGroup>
     <PackageReference Include="Uno.WinUI" Version="4.4.13" />
-	<PackageReference Include="Uno.SourceGenerationTasks" Version="4.1.0-dev.9" />
+    <PackageReference Include="Uno.SourceGenerationTasks" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!--Microsoft.SourceLink.GitHub is needed for Source Link support -->
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
   </ItemGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
-	<DefineConstants>$(DefineConstants);__WASM__</DefineConstants>
+    <DefineConstants>$(DefineConstants);__WASM__</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)'=='net6.0-windows10.0.18362'">
@@ -35,13 +49,20 @@
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 	
   <ItemGroup>
     <UpToDateCheckInput Include="**\*.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
   </ItemGroup>
 	
   <ItemGroup>
-	<PackageReference Include="System.Reactive" Version="4.4.1" />
+    <PackageReference Include="System.Reactive" Version="4.4.1" />
   </ItemGroup>
 	
   <ItemGroup>
