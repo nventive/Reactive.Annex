@@ -69,5 +69,5 @@
     <ProjectReference Include="..\Reactive.Annex\Reactive.Annex.csproj" />
   </ItemGroup>
 
-  <Import Project="..\..\Shared\Shared.projitems" Label="Shared" />
+  <Import Project="..\Reactive.Annex.Shared\Reactive.Annex.Shared.projitems" Label="Reactive.Annex.Shared" />
 </Project>
