@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reactive.Annex.Uno", "src\R
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reactive.Annex.Uno.WinUI", "src\Reactive.Annex.Uno.WinUI\Reactive.Annex.Uno.WinUI.csproj", "{AD0A3564-FED2-4B2A-ADC8-293F4DB85135}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{919A81B5-BAB8-441B-88AF-8DC1D494B930}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Reactive.Annex.Shared", "src\Reactive.Annex.Shared\Reactive.Annex.Shared.shproj", "{919A81B5-BAB8-441B-88AF-8DC1D494B930}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,10 +107,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5BA7DD68-E008-4F53-8F51-83D42D3877B9}
-	EndGlobalSection
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Shared\Shared.projitems*{919a81b5-bab8-441b-88af-8dc1d494b930}*SharedItemsImports = 13
-		Shared\Shared.projitems*{ad0a3564-fed2-4b2a-adc8-293f4db85135}*SharedItemsImports = 5
-		Shared\Shared.projitems*{ba16a5bc-8590-465a-ba6b-9fb98da5ea98}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
