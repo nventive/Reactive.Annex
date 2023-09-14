@@ -4,6 +4,8 @@
 `Reactive.Annex.Uno` also contains an easy-to-use implementation of a dispatcher scheduler following the `IScheduler` interface.
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+![Version](https://img.shields.io/nuget/v/Reactive.Annex?style=flat-square)
+![Downloads](https://img.shields.io/nuget/dt/Reactive.Annex?style=flat-square)
 
 ## Getting Started
 
