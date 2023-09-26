@@ -1,7 +1,6 @@
 ﻿# Reactive.Annex
 
-`Reactive.Annex` contains extension methods to help developers make the most out of the Reactive world.
-`Reactive.Annex.Uno` also contains an easy-to-use implementation of a dispatcher scheduler following the `IScheduler` interface.
+New types and extension methods built on top of [`System.Reactive`](https://github.com/dotnet/reactive).
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 ![Version](https://img.shields.io/nuget/v/Reactive.Annex?style=flat-square)
@@ -9,37 +8,49 @@
 
 ## Getting Started
 
-Add the `Reactive.Annex` nuget package and its dependencies to your project.
+1. Add the `Reactive.Annex` nuget package to your project.
 
-Then, make sure you are using the `System.Reactive.Linq` and `System.Reactive.Concurrency` namespaces in your file.
+1. Then, make sure you are using the `System.Reactive.Linq` and `System.Reactive.Concurrency` namespaces in your file.
 
 You are now ready to use these handy extension methods!
 
-If your project uses the [Uno platform](https://platform.uno/), you can also add the `Reactive.Annex.Uno` package to your project. You can now create a `MainDispatcherScheduler`, which implements the `IDispatcherScheduler` interface.
+## Next Steps
+If your project uses [Uno Platform](https://platform.uno/), you can also add the following packages.
+- `Reactive.Annex.Uno` for projects using **Uno.UI** and **UWP**.
+- `Reactive.Annex.Uno.WinUI` for projects using **Uno.WinUI** or **WinUI**.
 
+With this, You can create a `MainDispatcherScheduler`, which implements the `IDispatcherScheduler` interface.
+
+### WinUI / Uno.WinUI
+```csharp
+Microsoft.UI.Dispatching.DispatcherQueue dispatcherQueue = //...
+var scheduler = new MainDispatcherScheduler(dispatcherQueue);
 ```
-var dispatcher = new MainDispatcherScheduler(CoreDispatcher.Main);
+### UWP / Uno.UI
+```csharp
+Windows.UI.Core coreDispatcher = //...
+var scheduler = new MainDispatcherScheduler(coreDispatcher);
 ```
 
 ## Features
 
-`Reactive.Annex` features:
+### Specialized Interfaces for DI
+You can use `IBackgroundScheduler` and `IDispatcherScheduler` to clearly differentiate background schedulers from dispatcher schedulers. Both interfaces implement `IScheduler`. This is useful when using dependency injection.
 
-* `IBackgroundScheduler` and `IDispatcherScheduler`: Strongly-typed interfaces to clearly differentiate background schedulers from dispatcher schedulers. No need to rely on variable names anymore
+#### Implementations
+`MainDispatcherScheduler` is an implementation of `IDispatcherScheduler`. It's available from the `Reactive.Annex.Uno` and `Reactive.Annex.Uno.WinUI` packages.
+- Use `Reactive.Annex.Uno` in projets using **UWP** or **Uno.UI**.
+- Use `Reactive.Annex.Uno.WinUI` in projects using **WinUI** or **Uno.WinUI**.
 
-* `IObservable` extensions
-    - `FirstAsync`: Creates a task from an IObservable with the first value observed.
-    - `FromAsync`: Converts an async method into an observable sequence.
-	- `SelectManyDisposePrevious`: Runs an async action each time your observable sequence produces a new value while making sure to cancel the previous action if it's still running.
-    - `SkipWhileSelectMany`: Projects element of an observable sequence to another observable sequence, skipping new elements while resulting observable is not completed, and merges the resulting observable sequences into one observable sequence.
+### Extension Methods on `IObservable`
+- `FirstAsync`: Creates a task from an IObservable with the first value observed.
+- `FromAsync`: Converts an async method into an observable sequence.
+- `SelectManyDisposePrevious`: Runs an async action each time your observable sequence produces a new value while making sure to cancel the previous action if it's still running.
+- `SkipWhileSelectMany`: Projects element of an observable sequence to another observable sequence, skipping new elements while resulting observable is not completed, and merges the resulting observable sequences into one observable sequence.
 
-* `IScheduler` extensions
-    - `ScheduleTask`: Schedules work using an asynchronous method, allowing for cooperative scheduling in an imperative coding style.
-    - `Run`: Awaits a task execution on the specified scheduler, providing the result.
-
-`Reactive.Annex.Uno` features:
-
-* `MainDispatcherScheduler`: an easy-to-use implementation of `IDispatcherScheduler`
+### Extension Methods on `IScheduler`
+- `ScheduleTask`: Schedules work using an asynchronous method, allowing for cooperative scheduling in an imperative coding style.
+- `Run`: Awaits a task execution on the specified scheduler, providing the result.
 
 ## Changelog
 
@@ -57,8 +68,3 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the process for
 contributing to this project.
 
 Be mindful of our [Code of Conduct](CODE_OF_CONDUCT.md).
-
-## Contributors
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
