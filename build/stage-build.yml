@@ -21,7 +21,7 @@
   inputs:
     command: 'custom'
     custom: 'workload'
-    arguments: 'install android ios macos maccatalyst'
+    arguments: 'install android macos maccatalyst wasm-tools-net6'
     
 - task: MSBuild@1
   displayName: 'Restore solution packages'
