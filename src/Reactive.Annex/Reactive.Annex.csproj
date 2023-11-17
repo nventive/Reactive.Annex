@@ -11,7 +11,7 @@
 		<Description>Reactive.Annex</Description>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<PackageTags>reactive;annex;mvvm;xamarin;ios;android;uwp;maui;winui;</PackageTags>
+		<PackageTags>reactive;annex;mvvm;ios;android;maui;winui;</PackageTags>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/nventive/Chinook.DynamicMvvm</PackageProjectUrl>
 
