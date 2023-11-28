@@ -16,7 +16,6 @@ You are now ready to use these handy extension methods!
 
 ## Next Steps
 If your project uses [Uno Platform](https://platform.uno/), you can also add the following packages.
-- `Reactive.Annex.Uno` for projects using **Uno.UI** and **UWP**.
 - `Reactive.Annex.Uno.WinUI` for projects using **Uno.WinUI** or **WinUI**.
 
 With this, You can create a `MainDispatcherScheduler`, which implements the `IDispatcherScheduler` interface.
@@ -25,11 +24,6 @@ With this, You can create a `MainDispatcherScheduler`, which implements the `IDi
 ```csharp
 Microsoft.UI.Dispatching.DispatcherQueue dispatcherQueue = //...
 var scheduler = new MainDispatcherScheduler(dispatcherQueue);
-```
-### UWP / Uno.UI
-```csharp
-Windows.UI.Core coreDispatcher = //...
-var scheduler = new MainDispatcherScheduler(coreDispatcher);
 ```
 
 ## Features
@@ -51,6 +45,15 @@ You can use `IBackgroundScheduler` and `IDispatcherScheduler` to clearly differe
 ### Extension Methods on `IScheduler`
 - `ScheduleTask`: Schedules work using an asynchronous method, allowing for cooperative scheduling in an imperative coding style.
 - `Run`: Awaits a task execution on the specified scheduler, providing the result.
+
+## Legacy
+- `Reactive.Annex.Uno` for projects using **Uno.UI** and **UWP**.
+
+### UWP / Uno.UI
+```csharp
+Windows.UI.Core coreDispatcher = //...
+var scheduler = new MainDispatcherScheduler(coreDispatcher);
+```
 
 ## Changelog
 
