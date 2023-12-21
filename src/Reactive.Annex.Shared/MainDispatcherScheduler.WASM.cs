@@ -1,4 +1,4 @@
-﻿#if NETSTANDARD2_0
+﻿#if __WASM__
 using System;
 using System.Reactive.Disposables;
 
