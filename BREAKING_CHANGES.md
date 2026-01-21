@@ -1,5 +1,11 @@
 ﻿# Breaking Changes
 
+## 3.0.0
+- Updated .NET from 7 to 10.
+- Updated Uno from 5 to 6.
+- Removed support for MacOS (Kept Mac Catalyst).
+
+
 ## 2.0.0 
 - Added support for .NET 7.
 - Updated Uno.WinUI to 5.0.19.
