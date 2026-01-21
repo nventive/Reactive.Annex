@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0</TargetFrameworks>
-		<!-- Ensures the .xr.xml files are generated in a proper layout folder -->
+		<!-- Ensures the .xr.xml files are generated in a proper layout folder. -->
 		<GenerateLibraryLayout>true</GenerateLibraryLayout>
 		<RootNamespace>Reactive.Annex</RootNamespace>
 		<Authors>nventive</Authors>
@@ -15,20 +15,20 @@
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/nventive/Chinook.DynamicMvvm</PackageProjectUrl>
 
-		<!--Needed for Source Link support -->
+		<!-- This is needed for Source Link support. -->
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	</PropertyGroup>
-	
+
 	<ItemGroup>
 		<PackageReference Include="System.Reactive" Version="4.4.1" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<!--Microsoft.SourceLink.GitHub is needed for Source Link support -->
-		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+		<!-- This is needed for Source Link support. -->
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.102" PrivateAssets="All" />
 	</ItemGroup>
 
 	<ItemGroup>
